@@ -129,22 +129,3 @@ with torch.no_grad():
 
 print(tokenizer.decode(output_ids[0], skip_special_tokens=True))
 ```
-
-## Project Repository Map
-Refer to the codebase directory configuration below to navigate the implementation steps across the data extraction engines, core model blocks, and execution scripts.
-
-```text
-IvLLM/
-├── README.md
-├── requirements.txt
-└── src/
-    ├── data/
-    │   ├── extract_fineweb.py       # Phase 1 FineWeb token extraction engine
-    │   ├── preprocess_math.py       # Phase 2 Mathematical data sharding script
-    │   └── preprocess_phase3.py     # Phase 3 Advanced data mix streaming script
-    ├── model/
-    │   ├── __init__.py
-    │   └── ivllm.py                 # Full 671M structural model definition & Phase 1 trainer
-    └── training/
-        ├── train_phase2.py          # Phase 2 Domain Adaptation execution routine
-        └── train_phase3.py          # Phase 3 Extended CPT training loop
